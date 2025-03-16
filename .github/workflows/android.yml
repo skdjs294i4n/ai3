@@ -21,16 +21,24 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
 
-      - name: Remove and Reinstall Gradle Wrapper
+      - name: Remove old Gradle Wrapper
+        run: rm -rf ./gradle/wrapper ./gradlew
+
+      - name: Download new Gradle Wrapper
         run: |
-          rm -rf ./gradle/wrapper ./gradlew
-          ./gradlew wrapper --gradle-version 8.2
+          mkdir -p gradle/wrapper
+          curl -sLo gradle/wrapper/gradle-wrapper.jar https://services.gradle.org/distributions/gradle-8.2-bin.zip
+          chmod +x gradlew
+
+      - name: Verify Gradle Wrapper
+        run: ls -la ./gradlew
 
       - name: Grant execute permission for gradlew
         run: chmod +x ./gradlew
 
-      - name: Verify Gradle Wrapper
-        run: ls -la ./gradlew
+      - name: Initialize Gradle Wrapper
+        run: |
+          ./gradlew wrapper --gradle-version 8.2
 
       - name: Clean project
         run: ./gradlew clean || echo "Gradle clean failed"
