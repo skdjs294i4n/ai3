@@ -21,20 +21,19 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
 
-      - name: Install Gradle
-        run: sudo apt-get update && sudo apt-get install -y gradle
-
       - name: Remove old Gradle Wrapper
         run: rm -rf ./gradlew ./gradle/wrapper
 
       - name: Generate Gradle Wrapper
-        run: gradle wrapper --gradle-version 8.2
+        run: |
+          gradle wrapper --gradle-version 8.2
+          ls -la  # 생성된 파일 목록 확인
 
       - name: Grant execute permission for gradlew
         run: chmod +x ./gradlew
 
       - name: Verify Gradle Wrapper
-        run: ls -la ./gradlew
+        run: ls -la ./gradlew ./gradle/wrapper
 
       - name: Build with Gradle
         run: ./gradlew build --stacktrace --info --no-daemon
