@@ -1,0 +1,13 @@
+This directory will contain the model files:
+- text_encoder_small.ptl
+- unet_small.ptl
+- vae_decoder_small.ptl
+- text_encoder_medium.ptl
+- unet_medium.ptl
+- vae_decoder_medium.ptl
+- text_encoder_large.ptl
+- unet_large.ptl
+- vae_decoder_large.ptl
+
+These need to be downloaded and added separately.
+The app will use these files by copying them to internal storage on first run.

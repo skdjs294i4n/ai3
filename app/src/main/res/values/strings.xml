@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">Stable Diffusion AI</string>
+    
+    <!-- Navigation -->
+    <string name="title_generation">Generate</string>
+    <string name="title_gallery">Gallery</string>
+    <string name="title_settings">Settings</string>
+    
+    <!-- Generation Screen -->
+    <string name="prompt_hint">Enter a detailed description of the image you want to generate…</string>
+    <string name="generate_button">Generate Image</string>
+    <string name="loading_model">Loading model…</string>
+    <string name="generating_image">Generating image…</string>
+    <string name="generation_complete">Generation complete!</string>
+    <string name="parameters_title">Generation Parameters</string>
+    <string name="steps_label">Steps:</string>
+    <string name="guidance_scale_label">Guidance Scale:</string>
+    <string name="generated_image_description">Generated image</string>
+    <string name="save_button">Save</string>
+    <string name="share_button">Share</string>
+    
+    <!-- Additional Generation Strings -->
+    <string name="generate_image">Generate Image</string>
+    <string name="enter_prompt">Enter your prompt</string>
+    <string name="inference_steps_20">Inference Steps: 20</string>
+    <string name="guidance_scale_7_5">Guidance Scale: 7.5</string>
+    <string name="image_preview">Image Preview</string>
+    <string name="generate">Generate</string>
+    <string name="prompt">Prompt</string>
+    <string name="detailed_image">Detailed Image</string>
+    <string name="created_on">Created on</string>
+    <string name="share">Share</string>
+    <string name="save">Save</string>
+    <string name="generated_image">Generated Image</string>
+    
+    <!-- Gallery Screen -->
+    <string name="empty_gallery">No generated images yet</string>
+    <string name="action_share">Share</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="gallery">Gallery</string>
+    <string name="image_details">Image Details</string>
+    
+    <!-- Settings Screen -->
+    <string name="model_settings_title">Model Settings</string>
+    <string name="model_size_label">Model Size</string>
+    <string name="model_size_small">Small (Lower quality, faster generation)</string>
+    <string name="model_size_medium">Medium (Balanced quality and speed)</string>
+    <string name="model_size_large">Large (Higher quality, slower generation)</string>
+    <string name="image_size_label">Image Resolution</string>
+    <string name="image_size_256">256×256 (Fast)</string>
+    <string name="image_size_384">384×384 (Medium)</string>
+    <string name="image_size_512">512×512 (Detailed)</string>
+    <string name="seed_label">Seed:</string>
+    <string name="seed_random">Random</string>
+    <string name="custom_model_label">Custom Model</string>
+    <string name="select_custom_model_button">Select Custom Model</string>
+    <string name="reset_model_button">Reset Model</string>
+    <string name="clear_cache_button">Clear Cache</string>
+    <string name="system_info_title">System Information</string>
+    <string name="memory_usage_placeholder">Memory usage: Calculating…</string>
+    <string name="model_info_placeholder">Model not loaded</string>
+    <string name="use_default_model">Use default model</string>
+    <string name="model_loading_success">Model loaded successfully</string>
+    <string name="model_format_not_supported">Model format not supported</string>
+    <string name="no_custom_models_found">No custom models found in the Download/ai folder</string>
+    <string name="model_selection_failed">Failed to select model</string>
+    <string name="model_reload_required">Please reset model to apply changes</string>
+    
+    <!-- Error Messages -->
+    <string name="error_model_loading">Failed to load model. Please check your device storage.</string>
+    <string name="error_image_generation">Failed to generate image. Please try again.</string>
+    <string name="error_out_of_memory">Out of memory. Try using a smaller model size.</string>
+    
+    <!-- Permission Messages -->
+    <string name="storage_permission_title">Storage Access Required</string>
+    <string name="storage_permission_message">This app needs access to your device storage to load custom AI models from your Download folder and save generated images.</string>
+    <string name="storage_permission_granted">Storage permission granted</string>
+    <string name="storage_permission_denied">Storage permission denied. Some features may not work properly.</string>
+    <string name="storage_permission_required">Storage permission is required for this feature</string>
+    <string name="image_saved">Image saved to gallery</string>
+    <string name="unable_to_save">Unable to save image</string>
+    <string name="share_image_via">Share image via</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+</resources>

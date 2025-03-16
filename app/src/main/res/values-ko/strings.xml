@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">스테이블 디퓨전 AI</string>
+    
+    <!-- Navigation -->
+    <string name="title_generation">이미지 생성</string>
+    <string name="title_gallery">갤러리</string>
+    <string name="title_settings">설정</string>
+    
+    <!-- Generation Screen -->
+    <string name="prompt_hint">생성하고 싶은 이미지에 대한 자세한 설명을 입력하세요...</string>
+    <string name="generate_button">이미지 생성</string>
+    <string name="loading_model">모델 로딩 중...</string>
+    <string name="generating_image">이미지 생성 중...</string>
+    <string name="generation_complete">생성 완료!</string>
+    <string name="parameters_title">생성 매개변수</string>
+    <string name="steps_label">스텝 수:</string>
+    <string name="guidance_scale_label">가이던스 강도:</string>
+    <string name="generated_image_description">생성된 이미지</string>
+    <string name="save_button">저장</string>
+    <string name="share_button">공유</string>
+    
+    <!-- Gallery Screen -->
+    <string name="empty_gallery">아직 생성된 이미지가 없습니다</string>
+    <string name="action_share">공유</string>
+    <string name="action_delete">삭제</string>
+    <string name="action_refresh">새로고침</string>
+    
+    <!-- Settings Screen -->
+    <string name="model_settings_title">모델 설정</string>
+    <string name="model_size_label">모델 크기</string>
+    <string name="model_size_small">작음 (낮은 품질, 빠른 생성)</string>
+    <string name="model_size_medium">중간 (균형잡힌 품질과 속도)</string>
+    <string name="model_size_large">큼 (높은 품질, 느린 생성)</string>
+    <string name="image_size_label">이미지 해상도</string>
+    <string name="image_size_256">256×256 (빠름)</string>
+    <string name="image_size_384">384×384 (중간)</string>
+    <string name="image_size_512">512×512 (상세함)</string>
+    <string name="seed_label">시드:</string>
+    <string name="seed_random">랜덤</string>
+    <string name="custom_model_label">커스텀 모델</string>
+    <string name="select_custom_model_button">커스텀 모델 선택</string>
+    <string name="reset_model_button">모델 초기화</string>
+    <string name="clear_cache_button">캐시 지우기</string>
+    <string name="system_info_title">시스템 정보</string>
+    <string name="memory_usage_placeholder">메모리 사용량: 계산 중...</string>
+    <string name="model_info_placeholder">모델이 로드되지 않음</string>
+    <string name="use_default_model">기본 모델 사용</string>
+    <string name="model_loading_success">모델 로드 성공</string>
+    <string name="model_format_not_supported">지원되지 않는 모델 형식</string>
+    <string name="no_custom_models_found">다운로드/ai 폴더에서 커스텀 모델을 찾을 수 없습니다</string>
+    <string name="model_selection_failed">모델 선택 실패</string>
+    <string name="model_reload_required">변경사항을 적용하려면 모델을 초기화하세요</string>
+    
+    <!-- Error Messages -->
+    <string name="error_model_loading">모델 로딩 실패. 기기 저장소를 확인해주세요.</string>
+    <string name="error_image_generation">이미지 생성 실패. 다시 시도해주세요.</string>
+    <string name="error_out_of_memory">메모리 부족. 더 작은 모델 크기를 사용해보세요.</string>
+    
+    <!-- Permission Messages -->
+    <string name="storage_permission_title">저장소 접근 권한 필요</string>
+    <string name="storage_permission_message">이 앱은 다운로드 폴더에서 사용자 정의 AI 모델을 로드하고 생성된 이미지를 저장하기 위해 기기 저장소에 접근해야 합니다.</string>
+    <string name="storage_permission_granted">저장소 접근 권한이 허용되었습니다</string>
+    <string name="storage_permission_denied">저장소 접근 권한이 거부되었습니다. 일부 기능이 제대로 작동하지 않을 수 있습니다.</string>
+    <string name="storage_permission_required">이 기능을 사용하려면 저장소 접근 권한이 필요합니다</string>
+    <string name="image_saved">이미지가 갤러리에 저장되었습니다</string>
+    <string name="unable_to_save">이미지를 저장할 수 없습니다</string>
+    <string name="share_image_via">이미지 공유 방법 선택</string>
+    <string name="ok">확인</string>
+    <string name="cancel">취소</string>
+    
+    <!-- Additional strings -->
+    <string name="generate_image">이미지 생성</string>
+    <string name="enter_prompt">프롬프트 입력</string>
+    <string name="inference_steps_20">추론 단계: 20</string>
+    <string name="guidance_scale_7_5">가이던스 강도: 7.5</string>
+    <string name="image_preview">이미지 미리보기</string>
+    <string name="generate">생성</string>
+    <string name="prompt">프롬프트</string>
+    <string name="detailed_image">상세 이미지</string>
+    <string name="created_on">생성일</string>
+    <string name="share">공유</string>
+    <string name="save">저장</string>
+    <string name="generated_image">생성된 이미지</string>
+    <string name="gallery">갤러리</string>
+    <string name="image_details">이미지 상세정보</string>
+</resources>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Model Settings Section -->
+        <TextView
+            android:id="@+id/model_settings_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/model_settings_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Model Size Selection -->
+        <TextView
+            android:id="@+id/model_size_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/model_size_label"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/model_settings_title" />
+
+        <RadioGroup
+            android:id="@+id/model_size_radio_group"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/model_size_label">
+
+            <RadioButton
+                android:id="@+id/model_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/model_size_small" />
+
+            <RadioButton
+                android:id="@+id/model_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/model_size_medium" />
+
+            <RadioButton
+                android:id="@+id/model_large"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/model_size_large" />
+        </RadioGroup>
+
+        <!-- Image Size Selection -->
+        <TextView
+            android:id="@+id/image_size_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/image_size_label"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/model_size_radio_group" />
+
+        <RadioGroup
+            android:id="@+id/image_size_radio_group"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_size_label">
+
+            <RadioButton
+                android:id="@+id/size_256"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/image_size_256" />
+
+            <RadioButton
+                android:id="@+id/size_384"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/image_size_384" />
+
+            <RadioButton
+                android:id="@+id/size_512"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/image_size_512" />
+        </RadioGroup>
+
+        <!-- Seed Value Selection -->
+        <TextView
+            android:id="@+id/seed_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/seed_label"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_size_radio_group" />
+
+        <TextView
+            android:id="@+id/seed_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/seed_random"
+            app:layout_constraintBottom_toBottomOf="@id/seed_label"
+            app:layout_constraintStart_toEndOf="@id/seed_label"
+            app:layout_constraintTop_toTopOf="@id/seed_label" />
+
+        <SeekBar
+            android:id="@+id/seed_seekbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/seed_label" />
+
+        <!-- Custom Model Button -->
+        <TextView
+            android:id="@+id/custom_model_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/custom_model_label"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/seed_seekbar" />
+
+        <Button
+            android:id="@+id/custom_model_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/select_custom_model_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/custom_model_label" />
+
+        <!-- Reset and Clear Buttons -->
+        <Button
+            android:id="@+id/reset_model_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/reset_model_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/custom_model_button" />
+
+        <Button
+            android:id="@+id/clear_cache_button"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/clear_cache_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/reset_model_button" />
+
+        <!-- System Information -->
+        <TextView
+            android:id="@+id/system_info_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/system_info_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clear_cache_button" />
+
+        <TextView
+            android:id="@+id/memory_usage_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/memory_usage_placeholder"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/system_info_title" />
+
+        <TextView
+            android:id="@+id/model_info_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/model_info_placeholder"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/memory_usage_text" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
