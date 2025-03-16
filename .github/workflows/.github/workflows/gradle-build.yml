@@ -24,13 +24,13 @@ jobs:
       - name: Install Gradle
         run: sudo apt-get update && sudo apt-get install -y gradle
 
-      - name: Remove old Gradle Wrapper
+      - name: Remove Old Gradle Wrapper
         run: rm -rf ./gradlew ./gradle/wrapper
 
       - name: Generate Gradle Wrapper
         run: gradle wrapper --gradle-version 8.2
 
-      - name: Grant execute permission for gradlew
+      - name: Grant Execute Permission for gradlew
         run: chmod +x ./gradlew
 
       - name: Build with Gradle
