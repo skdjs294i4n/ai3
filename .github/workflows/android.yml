@@ -21,6 +21,12 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
 
+      - name: Download Gradle Wrapper
+        run: |
+          mkdir -p ~/.gradle/wrapper/dists
+          curl -sLo gradle.zip https://services.gradle.org/distributions/gradle-8.2-bin.zip
+          unzip -d ~/.gradle/wrapper/dists gradle.zip
+
       - name: Grant execute permission for gradlew
         run: chmod +x ./gradlew
 
