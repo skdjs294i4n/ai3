@@ -21,27 +21,26 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
 
-      - name: Download Gradle Wrapper
+      - name: Remove and Reinstall Gradle Wrapper
         run: |
-          mkdir -p ~/.gradle/wrapper/dists
-          curl -sLo gradle.zip https://services.gradle.org/distributions/gradle-8.2-bin.zip
-          unzip -d ~/.gradle/wrapper/dists gradle.zip
+          rm -rf ./gradle/wrapper ./gradlew
+          ./gradlew wrapper --gradle-version 8.2
 
       - name: Grant execute permission for gradlew
         run: chmod +x ./gradlew
 
-      - name: Build with Gradle
-        run: ./gradlew assembleDebug --no-daemon || echo "Gradle build failed"
+      - name: Verify Gradle Wrapper
+        run: ls -la ./gradlew
 
-      - name: Check APK Existence
+      - name: Clean project
+        run: ./gradlew clean || echo "Gradle clean failed"
+
+      - name: Build with Gradle
+        run: ./gradlew assembleDebug --stacktrace --info --no-daemon || echo "Gradle build failed"
+
+      - name: Check APK file
         run: |
           if [ ! -f "app/build/outputs/apk/debug/app-debug.apk" ]; then
             echo "Error: APK file not found!"
             exit 1
           fi
-
-      - name: Upload APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: app-debug
-          path: app/build/outputs/apk/debug/app-debug.apk
